@@ -1,0 +1,282 @@
+body
+	margin: 0
+	padding: 0
+	font-family: 'Open Sans', sans-serif;
+
+.layer
+	position: absolute
+	top: 0
+	left: 0  
+	height: 100%
+	width: 100%
+
+.main-box
+	width: 100%
+	height: 100vh
+	display: flex
+
+	&__
+			&left
+				width: 150px
+				height: 100%
+				
+			&right
+				width: calc(100% - 150px)
+				height: 100%
+				
+
+.left
+	width: 100%
+	height: 100%
+	position: relative
+
+	&__
+			&layer
+				background-image: url('img/layer-left--aside.png') 
+			
+			&icon
+				margin: 0 auto
+				padding-top: 70px
+				width: 30px
+				height: 20px
+				position: relative
+				z-index: 10
+				background-image: url('img/i-left--aside.png')
+				background-repeat: no-repeat
+				background-position: center center
+
+				&:after
+					content: ''	
+					width: 2px
+					height: 111px
+					position: absolute
+					margin-top: 15px
+					left: 50%
+					transform: translateX(-50%)		
+					display: block
+					background-color: #707070
+
+
+			&top
+				height: 30%
+				
+			&bottom			
+				width: 100%
+				height: 70%
+				background-image: url('img/img-left--aside.png')
+				background-repeat: no-repeat
+				background-position:  center bottom
+
+.right
+	overflow: hidden
+	height: 100%
+	width: 100%
+	position: relative
+	
+
+	&__
+			&r-top
+				display: flex
+				justify-content: flex-end
+			
+
+			&r-center
+				width: 100%
+				height: 63%
+				position: relative
+
+			&r-bottom
+				
+				display: flex
+				justify-content: flex-end
+
+
+				
+			&layer
+
+				&_r-center
+					background-image: url('img/layer-center--bg.svg')
+					z-index: 10
+
+			&abs-block
+				width: 690px
+				height: 100%
+				position: absolute
+				top: 0
+				left: 0
+				z-index: 20
+				overflow: hidden
+				
+
+.abs-block
+	width: 200%
+	height: 100vh
+	display: flex
+
+	&__layer
+		background-image: url('img/layer-abs-block--center.png')
+		z-index: 22
+
+	&__
+			&img
+				width: 100%				
+				height: 100vh
+				background-image: url('img/img-abs-block--center.png') 
+				background-position: bottom center
+				position: relative
+				
+
+				
+.r-top
+	padding-right: 150px
+	padding-top: 55px
+	padding-bottom: 55px
+	position: relative
+	display: flex
+	justify-content: flex-end
+	align-items: center
+	background-color: #fff
+	line-height: 40px
+
+	&:before
+		content: ''
+		position: absolute
+		left: -570px
+		display: block
+		width: 532px
+		height: 1px
+		background-color: #707070
+		opacity: 0.37 
+
+	&:after
+		content: ''
+		position: absolute
+		right: 0px
+		display: block
+		width: 104px
+		height: 1px
+		background-color: #707070
+		opacity: 0.37
+		
+	&__
+			&text
+				color: #757575		
+				font-size: 16px
+				font-weight: 400
+				letter-spacing: 0.32px
+							
+			&phone
+				padding-left: 35px
+				color: #545454	
+				font-size: 29px
+				font-weight: 700
+				letter-spacing: -0.29px
+
+			&span
+				padding: 0 25px
+
+.r-center
+	width: 100%
+	height: 100%
+	position: relative
+	background-image: url('img/img-center--bg.png')
+	background-repeat: no-repeat;
+	background-position: center center
+	
+	
+	&_animation
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		animation: 4s linear 0s normal none infinite running rot;
+
+	&__
+			&layer
+				background-image: url('img/layer-center--bg.svg')
+	
+@keyframes rot 
+  0% 
+    background-position: 25%, 50%;
+    transform: skewX(0);
+
+  50% 
+     background-position: 25.5%, 50%;
+     transform: skewX(1.5deg);
+  
+  100% 
+     background-position: 25%, 50%;
+     transform: skewX(0deg);
+ 
+.r-bottom
+	padding-top: 40px
+	padding-bottom: 50px
+	padding-left: 425px
+	display: flex
+	align-items: center
+	justify-content: space-between
+	width: 850px
+	padding-right: 150px
+	position: relative
+	z-index: 22
+	background-color: white
+
+	&:before
+		content: ''
+		position: absolute
+		left: -150px
+		display: block
+		width: 532px
+		height: 1px
+		background-color: #707070
+		opacity: 0.37 
+
+	&:after
+		content: ''
+		position: absolute
+		right: 0px
+		display: block
+		width: 104px
+		height: 1px
+		background-color: #707070
+		opacity: 0.37
+	
+	&__
+			&elm
+
+				&:nth-child(2)
+					width: 30px
+					height: 30px
+					background-image: url('img/i-plus--bttm.png')
+
+.elm
+
+	&__
+			&text
+				color: #757575
+				font-family: "Open Sans"
+				font-size: 30px
+				font-weight: 400
+				letter-spacing: -0.3px
+				line-height: 57px
+
+			&i
+				&_top
+					width: 120px
+					height: 95px
+					background-image: url('img/i-cap--bttm.png')
+					background-repeat: no-repeat
+
+				&_bttm
+					width: 120px
+					height: 27px
+					background-image: url('img/i-text--bttm.png')
+					background-repeat: no-repeat
+
+				&_pumb
+					width: 120px
+					height: 120px
+					background-image: url('img/i-pumb--bttm.png')
+					background-repeat: no-repeat
+
